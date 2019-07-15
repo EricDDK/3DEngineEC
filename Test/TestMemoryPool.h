@@ -42,7 +42,22 @@ public:
 class TestMemoryPool
 {
 public:
-	static void test1()
+	void testMemoryPool()
+	{
+		test1();
+		test2();
+		testLarge();
+		testMacro();
+		testGC();
+#if TARGET_PLATFORM == PLATFORM_WIN32
+		testEffect();
+		testMallocPerformance();
+#endif
+		delete MemoryTool::getInstance();
+	}
+
+private:
+	void test1()
 	{
 		auto p = MemoryTool::getInstance()->safeMalloc<int>();
 		*p = 5;
@@ -50,7 +65,7 @@ public:
 		EXPECT(p, NULL);
 	}
 
-	static void test2()
+	void test2()
 	{
 		auto p = MemoryTool::getInstance()->safeMalloc<Test>(1, 2.0);
 		EXPECT(p->v, 1);
@@ -58,14 +73,14 @@ public:
 		MemoryTool::getInstance()->safeFree(p);
 	}
 
-	static void testLarge()
+	void testLarge()
 	{
 		auto p = MemoryTool::getInstance()->safeMalloc<TestLarge>(5);
 		EXPECT(p->l1, 5);
 		MemoryTool::getInstance()->safeFree(p);
 	}
 
-	static void testMacro()
+	void testMacro()
 	{
 		// no params construct
 		auto p1 = NEW(int);
@@ -82,7 +97,7 @@ public:
 		DELET(p3);
 	}
 
-	static void testGC()
+	void testGC()
 	{
 		size_t i;
 		for (i = 0; i < 128; ++i)
@@ -96,9 +111,9 @@ public:
 		EXPECT(MemoryTool::getInstance()->getPoolColSize(0), NODE_MAX_SIZE);
 	}
 
-#ifdef _MSC_VER
+#ifdef TARGET_PLATFORM == PLATFORM_WIN32
 #include <time.h>
-	static void testEffect()
+	void testEffect()
 	{
 		size_t i;
 		clock_t start, end;
@@ -136,11 +151,11 @@ public:
 		auto diff2 = end - start;
 		/*if (diff1 >= diff2)
 		{
-			EXPECT(1, 2);
+		EXPECT(1, 2);
 		}*/
 	}
 
-	static void testMallocPerformance()
+	void testMallocPerformance()
 	{
 		clock_t start, end;
 		start = clock();
@@ -175,24 +190,10 @@ public:
 		auto diff2 = end - start;
 		/*if (diff1 >= diff2)
 		{
-			EXPECT(1, 2);
+		EXPECT(1, 2);
 		}*/
 	}
 #endif
-
-	static void testMemoryPool()
-	{
-		test1();
-		test2();
-		testLarge();
-		testMacro();
-		testGC();
-#ifdef _MSC_VER
-		testEffect();
-		testMallocPerformance();
-#endif
-		delete MemoryTool::getInstance();
-	}
 };
 
 #endif

@@ -3,8 +3,7 @@
 
 #include "../Common/Macro.h"
 
-ENGINE_NAMESPACE_START
-
+// deprecated
 enum class Platform : int
 {
 	None = 0,
@@ -12,33 +11,38 @@ enum class Platform : int
 	iOS = 2,
 	Android = 3,
 	Mac = 4,
-
 };
 
-#define TARGET_PLATFORM Platform::None
+#define PLATFORM_NONE 0
+#define PLATFORM_WIN32 1
+#define PLATFORM_IOS 2
+#define PLATFORM_ANDROID 3
+#define PLATFORM_MAC 4
+
+#define TARGET_PLATFORM PLATFORM_NONE
 
 // iOS
 #if defined(__APPLE__) && !defined(ANDROID)
 #include <TargetConditionals.h>
 	#if TARGET_OS_IPHONE
 		#undef  TARGET_PLATFORM
-		#define TARGET_PLATFORM Platform::iOS
+		#define TARGET_PLATFORM PLATFORM_IOS
 	#elif TARGET_OS_MAC
 		#undef  TARGET_PLATFORM
-		#define TARGET_PLATFORM Platform::Mac
+		#define TARGET_PLATFORM PLATFORM_MAC
 	#endif
 #endif
 
 // android
 #if defined(ANDROID)
 #undef  TARGET_PLATFORM
-#define TARGET_PLATFORM Platform::Android
+#define TARGET_PLATFORM PLATFORM_ANDROID
 #endif
 
 // windows
 #if defined(_WIN32) || defined(_WINDOWS)
 	#undef  TARGET_PLATFORM
-	#define TARGET_PLATFORM Platform::Win32
+	#define TARGET_PLATFORM PLATFORM_WIN32
 #endif
 
 // 64 bits OS
@@ -50,7 +54,5 @@ enum class Platform : int
 #else
 	#define OS_64BIT false
 #endif // judge is 64 bit
-
-ENGINE_NAMESPACE_END
 
 #endif // !_PLATFORM_PLATFORMCONFIG_H__

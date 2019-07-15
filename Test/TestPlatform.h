@@ -9,9 +9,7 @@ class TestPlatform
 public:
 	void testPlatform()
 	{
-		auto platform = engine::TARGET_PLATFORM;
-		UNEXPEXT(platform, engine::Platform::None);
-
+		UNEXPEXT(TARGET_PLATFORM, PLATFORM_NONE);
 	}
 };
 
