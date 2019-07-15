@@ -1,10 +1,6 @@
 #ifndef _MEMORY_POOL_H__
 #define _MEMORY_POOL_H__
 
-#ifndef MP_LOG
-#define MP_LOG(msg) do {std::cout << msg << std::endl;} while(0)
-#endif // log define
-
 #include "../../Common/Macro.h"
 #include <assert.h>
 #include <vector>
