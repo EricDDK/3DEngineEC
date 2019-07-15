@@ -41,6 +41,16 @@ enum class Platform : int
 	#define TARGET_PLATFORM Platform::Win32
 #endif
 
+// 64 bits OS
+#if defined(_M_X64) || defined(_WIN64) \
+|| defined(__LP64__) || defined(_LP64) \
+|| defined(__x86_64) || defined(__arm64__) \
+|| defined(__aarch64__)
+	#define OS_64BIT true
+#else
+	#define OS_64BIT false
+#endif // judge is 64 bit
+
 ENGINE_NAMESPACE_END
 
 #endif // !_PLATFORM_PLATFORMCONFIG_H__

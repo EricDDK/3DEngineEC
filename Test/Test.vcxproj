@@ -119,7 +119,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="TestMain.cpp" />
-    <ClCompile Include="TestPlatform.cpp" />
+    <ClCompile Include="TestMemoryPool.h" />
+    <ClCompile Include="TestPlatform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestCommon.h" />
