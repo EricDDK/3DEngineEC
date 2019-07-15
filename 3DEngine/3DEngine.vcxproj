@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Base\MemoryPool\MemoryPool.h" />
+    <ClInclude Include="Base\MemoryPool\MemoryTool.h" />
     <ClInclude Include="Common\3DEngine.h" />
     <ClInclude Include="Common\Macro.h" />
     <ClInclude Include="Common\Shader.h" />

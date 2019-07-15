@@ -31,6 +31,12 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{3bffdb40-7e42-4c9b-b859-b7d52c33dd8b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{6f72d1ae-85b6-41d7-ad1e-f9df63360e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\MemoryPool">
+      <UniqueIdentifier>{1f74671a-ba9d-4861-91eb-034b7153fe97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Shader.h">
@@ -44,6 +50,12 @@
     </ClInclude>
     <ClInclude Include="Common\Macro.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\MemoryPool\MemoryPool.h">
+      <Filter>Base\MemoryPool</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\MemoryPool\MemoryTool.h">
+      <Filter>Base\MemoryPool</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

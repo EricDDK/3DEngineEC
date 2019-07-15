@@ -4,5 +4,12 @@
 int main(int argc, char** argv)
 {
 	
+
+
+#ifdef _MSC_VER
+	system("pause");
+#else
+
+#endif
 	return 1;
 }
