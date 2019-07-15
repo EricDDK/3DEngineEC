@@ -34,6 +34,7 @@
 # vs
 *.VC.db
 *.VC.VC.opendb
+.suo
 [Dd]ebug/
 [Rr]elease/
 build/
