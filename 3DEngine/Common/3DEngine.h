@@ -2,6 +2,7 @@
 #define __COMMON_3DENGINE_H__
 
 #include "Macro.h"
+#include "../Platform/PlatformConfig.h"
 
 
 
