@@ -22,11 +22,13 @@
     <ClInclude Include="Base\MemoryPool\MemoryPool.h" />
     <ClInclude Include="Base\MemoryPool\MemoryTool.h" />
     <ClInclude Include="Common\3DEngine.h" />
+    <ClInclude Include="Common\Log.h" />
     <ClInclude Include="Common\Macro.h" />
     <ClInclude Include="Common\Shader.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Common\Log.cpp" />
     <ClCompile Include="Common\Shader.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -81,7 +83,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
-    <IntDir>..\$(Configuration)\</IntDir>
+    <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>

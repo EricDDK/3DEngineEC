@@ -57,9 +57,15 @@
     <ClInclude Include="Base\MemoryPool\MemoryTool.h">
       <Filter>Base\MemoryPool</Filter>
     </ClInclude>
+    <ClInclude Include="Common\Log.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Log.cpp">
       <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
