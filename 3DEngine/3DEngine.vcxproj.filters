@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Network">
+      <UniqueIdentifier>{83a8d5cf-d897-418e-850c-a315142aa3d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{64a757d6-b4bc-485d-8527-d915baffb1d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{23c05d64-cfcd-43cc-8373-f4de995be0ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{0b15cdae-282e-4b24-8a31-951b339854ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{4fbb4b6a-f6ef-4c43-bec1-d964bd025027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{f89a2f4a-47c6-4c54-850e-5646ce34728f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{dda449f2-321f-40ce-8467-f6be29b52a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{305bbd81-130f-4963-b646-46ed62850963}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{4cd160dd-c843-43f8-bee2-d0ac09587754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{3bffdb40-7e42-4c9b-b859-b7d52c33dd8b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Shader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\3DEngine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\PlatformConfig.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Macro.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Shader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
