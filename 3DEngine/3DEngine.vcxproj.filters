@@ -32,7 +32,4 @@
       <UniqueIdentifier>{3bffdb40-7e42-4c9b-b859-b7d52c33dd8b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
 </Project>
