@@ -32,4 +32,23 @@
       <UniqueIdentifier>{3bffdb40-7e42-4c9b-b859-b7d52c33dd8b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Shader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\3DEngine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\PlatformConfig.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Macro.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Shader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

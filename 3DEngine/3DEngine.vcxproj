@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\3DEngine.h" />
+    <ClInclude Include="Common\Macro.h" />
+    <ClInclude Include="Common\Shader.h" />
+    <ClInclude Include="Platform\PlatformConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Shader.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3893772E-78CE-49FC-B86F-AE13D09AE86C}</ProjectGuid>
     <RootNamespace>My3DEngine</RootNamespace>
