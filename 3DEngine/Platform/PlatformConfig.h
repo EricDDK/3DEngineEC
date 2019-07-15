@@ -36,7 +36,7 @@ enum class Platform : int
 #endif
 
 // windows
-#if defined(_WIN32) && defined(_WINDOWS)
+#if defined(_WIN32) || defined(_WINDOWS)
 	#undef  TARGET_PLATFORM
 	#define TARGET_PLATFORM Platform::Win32
 #endif
