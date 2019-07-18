@@ -28,7 +28,6 @@
     <ClInclude Include="Platform\PlatformConfig.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Common\Log.cpp" />
     <ClCompile Include="Common\Shader.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
