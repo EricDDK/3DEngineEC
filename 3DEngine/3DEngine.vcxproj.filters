@@ -60,6 +60,12 @@
     <ClInclude Include="Common\Log.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\MathCommon.h">
+      <Filter>Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">

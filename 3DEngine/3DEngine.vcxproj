@@ -25,6 +25,8 @@
     <ClInclude Include="Common\Log.h" />
     <ClInclude Include="Common\Macro.h" />
     <ClInclude Include="Common\Shader.h" />
+    <ClInclude Include="Math\Math.h" />
+    <ClInclude Include="Math\MathCommon.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
   </ItemGroup>
   <ItemGroup>
