@@ -69,12 +69,24 @@
     <ClInclude Include="Math\Vector2.h">
       <Filter>Math</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Vector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\VectorUtil.h">
+      <Filter>Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="Math\Vector2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\VectorUtil.cpp">
       <Filter>Math</Filter>
     </ClCompile>
   </ItemGroup>
