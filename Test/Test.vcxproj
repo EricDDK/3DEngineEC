@@ -28,7 +28,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -125,6 +125,12 @@
   <ItemGroup>
     <ClInclude Include="TestCommon.h" />
     <ClInclude Include="TestLog.h" />
+    <ClInclude Include="TestMath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3DEngine\3DEngine.vcxproj">
+      <Project>{3893772e-78ce-49fc-b86f-ae13d09ae86c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DEngine", "3DEngine.vcxproj", "{3893772E-78CE-49FC-B86F-AE13D09AE86C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "..\Game\Game.vcxproj", "{87E479D7-F2D7-4155-B58B-A813A91E1DC6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3893772E-78CE-49FC-B86F-AE13D09AE86C} = {3893772E-78CE-49FC-B86F-AE13D09AE86C}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "..\Test\Test.vcxproj", "{686D195F-1C97-44A0-9493-294D3A730A36}"
 EndProject
