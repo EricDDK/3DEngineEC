@@ -28,11 +28,15 @@
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Math\MathCommon.h" />
     <ClInclude Include="Math\Vector2.h" />
+    <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Math\VectorUtil.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp" />
     <ClCompile Include="Math\Vector2.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Math\VectorUtil.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3893772E-78CE-49FC-B86F-AE13D09AE86C}</ProjectGuid>
