@@ -2,6 +2,7 @@
 
 #include "TestCommon.h"
 #include "TestLog.h"
+#include "TestMath.h"
 #include "TestMemoryPool.h"
 #include "TestPlatform.h"
 
@@ -10,6 +11,7 @@ int main(int argc, char** argv)
 	// test start
 	{
 		TestLog testLog; testLog.testLog();
+		TestMath testMath; testMath.testMath();
 		TestMemoryPool testMemory; testMemory.testMemoryPool();
 		TestPlatform testPlatform; testPlatform.testPlatform();
 	}
