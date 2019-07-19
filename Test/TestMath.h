@@ -7,6 +7,8 @@
 #include "Math/Vector2.h"
 #include "Math/Vector3.h"
 #include "Math/VectorUtil.h"
+#include "Math/Matrix3.h"
+#include "Math/MatrixUtil.h"
 
 class TestMath
 {
@@ -15,8 +17,9 @@ public:
 	{
 		testVec2();
 		testVec3();
-
 		testVectorUtil();
+
+		testMat3();
 	}
 
 private:
@@ -86,6 +89,24 @@ private:
 		EXPECT(vc.z, 2);
 		auto d = engine::VectorUtil::dot(v1, v2);
 		EXPECT(d, 14);
+	}
+
+	void testMat3()
+	{
+		engine::Matrix3 m1;
+		engine::Matrix3 s = engine::Matrix3::createScale(5.0f);
+		EXPECT(s.mat[0][0], 5.0f);
+		EXPECT(s.mat[1][1], 5.0f);
+		engine::Matrix3 t = engine::Matrix3::createTranslation(engine::Vector2(1, 2));
+		EXPECT(t.mat[2][0], 1.0f);
+		EXPECT(t.mat[2][1], 2.0f);
+		engine::Matrix3 r = engine::Matrix3::createRotation(30.0f);
+		EXPECT(r.mat[0][0], std::cos(30.0f));
+		EXPECT(r.mat[0][1], std::sin(30.0f));
+		EXPECT(r.mat[1][0], -std::sin(30.0f));
+		EXPECT(r.mat[1][1], std::cos(30.0f));
+		engine::Matrix3 result = s * t * r;
+
 	}
 };
 

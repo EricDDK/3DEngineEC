@@ -75,6 +75,12 @@
     <ClInclude Include="Math\VectorUtil.h">
       <Filter>Math</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Matrix3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\MatrixUtil.h">
+      <Filter>Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
@@ -87,6 +93,12 @@
       <Filter>Math</Filter>
     </ClCompile>
     <ClCompile Include="Math\VectorUtil.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Matrix3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\MatrixUtil.cpp">
       <Filter>Math</Filter>
     </ClCompile>
   </ItemGroup>

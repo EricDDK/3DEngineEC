@@ -1,7 +1,8 @@
-#ifndef __MATH_VECTOR2_H__
-#define __MATH_VECTOR2_H__
+#ifndef __MATH_MATRIX3_H__
+#define __MATH_MATRIX3_H__
 
 #include "../Common/Macro.h"
+#include "Vector2.h"
 
 ENGINE_NAMESPACE_START
 
@@ -21,6 +22,16 @@ public:
 	Matrix3 operator*(const Matrix3& rhs);
 
 	Matrix3 operator*=(const Matrix3& rhs);
+
+	static Matrix3 createScale(float xScale, float yScale);
+
+	static Matrix3 createScale(const Vector2& scale);
+
+	static Matrix3 createScale(float scale);
+
+	static Matrix3 createRotation(float theta);
+
+	static Matrix3 createTranslation(const Vector2& trans);
 
 	const static Matrix3 Identity;
 };
