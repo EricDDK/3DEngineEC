@@ -120,7 +120,7 @@ Matrix3 Matrix3::createTranslation(const Vector2 & trans)
 	return result;
 }
 
-static float m3Ident[3][3] = 
+static float m3Ident[3][3] =
 {
 	{ 1.0f, 0.0f, 0.0f },
 	{ 0.0f, 1.0f, 0.0f },

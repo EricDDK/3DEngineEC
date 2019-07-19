@@ -135,4 +135,11 @@ void Vector3::normalize()
 	z *= n;
 }
 
+Vector3 Vector3::normalize(const Vector3& vec)
+{
+	Vector3 result = vec;
+	result.normalize();
+	return result;
+}
+
 ENGINE_NAMESPACE_END

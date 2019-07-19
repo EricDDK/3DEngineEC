@@ -54,6 +54,8 @@ public:
 	float distance();
 
 	void normalize();
+
+	static Vector3 normalize(const Vector3& vec);
 };
 
 ENGINE_NAMESPACE_END
