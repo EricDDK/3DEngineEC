@@ -8,6 +8,7 @@
 #include "Math/Vector3.h"
 #include "Math/VectorUtil.h"
 #include "Math/Matrix3.h"
+#include "Math/Matrix4.h"
 #include "Math/MatrixUtil.h"
 
 class TestMath
@@ -20,6 +21,7 @@ public:
 		testVectorUtil();
 
 		testMat3();
+		testMat4();
 	}
 
 private:
@@ -107,6 +109,14 @@ private:
 		EXPECT(r.mat[1][1], std::cos(30.0f));
 		engine::Matrix3 result = s * t * r;
 
+	}
+
+	void testMat4()
+	{
+		engine::Matrix4 m1;
+		engine::Matrix4 s = engine::Matrix4::createScale(5.0f);
+		EXPECT(s.mat[0][0], 5.0f);
+		EXPECT(s.mat[1][1], 5.0f);
 	}
 };
 
