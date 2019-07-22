@@ -142,4 +142,23 @@ Vector3 Vector3::normalize(const Vector3& vec)
 	return result;
 }
 
+float Vector3::dot(const Vector3& lhs, const Vector3& rhs)
+{
+	return (lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z);
+}
+
+Vector3 Vector3::cross(const Vector3& lhs, const Vector3& rhs)
+{
+	Vector3 result;
+	result.x = lhs.y * rhs.z - lhs.z * rhs.y;
+	result.y = lhs.z * rhs.x - lhs.x * rhs.z;
+	result.z = lhs.x * rhs.y - lhs.y * rhs.x;
+	return result;
+}
+
+const Vector3 Vector3::Zero(0.0f, 0.0f, 0.0f);
+const Vector3 Vector3::UnitX(1.0f, 0.0f, 0.0f);
+const Vector3 Vector3::UnitY(0.0f, 1.0f, 0.0f);
+const Vector3 Vector3::UnitZ(0.0f, 0.0f, 1.0f);
+
 ENGINE_NAMESPACE_END

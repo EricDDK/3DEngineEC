@@ -56,6 +56,16 @@ public:
 	void normalize();
 
 	static Vector3 normalize(const Vector3& vec);
+
+	static float dot(const Vector3& lhs, const Vector3& rhs);
+
+	static Vector3 cross(const Vector3& lhs, const Vector3& rhs);
+
+	static const Vector3 Zero;
+	static const Vector3 UnitX;
+	static const Vector3 UnitY;
+	static const Vector3 UnitZ;
+
 };
 
 ENGINE_NAMESPACE_END
