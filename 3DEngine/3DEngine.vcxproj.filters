@@ -113,5 +113,6 @@
     <ClCompile Include="Math\Quaternion.cpp">
       <Filter>Math</Filter>
     </ClCompile>
+    <ClCompile Include="External\include\glad\glad.c" />
   </ItemGroup>
 </Project>
