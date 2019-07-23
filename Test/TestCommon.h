@@ -15,6 +15,7 @@
 class TestCommon
 {
 public:
+	
 	TestCommon()
 	{
 		totalError = 0;
@@ -25,18 +26,19 @@ public:
 
 	int totalError;
 	int totalTest;
-};
 
-static TestCommon *s_test = new TestCommon();
+	static TestCommon* getInstance();
+	static TestCommon *s_test;
+};
 
 // expect test
 #define EXPECT(expect, actual) \
 do {\
     if (expect != actual) {\
         fprintf(stderr, "%s:%d: \n", __FILE__, __LINE__);\
-		s_test->totalError++;\
+		TestCommon::getInstance()->totalError++;\
 	}\
-	s_test->totalTest++;\
+	TestCommon::getInstance()->totalTest++;\
 }while(0)
 
 // unexpect test
@@ -44,9 +46,9 @@ do {\
 do {\
     if (unexpect == actual) {\
         fprintf(stderr, "%s:%d: \n", __FILE__, __LINE__);\
-		s_test->totalError++;\
+		TestCommon::getInstance()->totalError++;\
 	}\
-	s_test->totalTest++;\
+	TestCommon::getInstance()->totalTest++;\
 }while(0)
 
 #endif

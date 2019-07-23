@@ -96,6 +96,9 @@
     <ClInclude Include="Render\VertexArray.h">
       <Filter>Render</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Texture.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
@@ -131,6 +134,9 @@
     </ClCompile>
     <ClCompile Include="Render\VertexArray.cpp">
       <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Texture.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
