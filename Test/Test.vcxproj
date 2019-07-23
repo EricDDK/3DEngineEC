@@ -72,11 +72,15 @@
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <IncludePath>$(ProjectDir)..\3DEngine\External\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\3DEngine\External\libs;$(SolutionDir)..\Output\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\3DEngine\External\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
     <IntDir>..\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)..\3DEngine\External\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\3DEngine\External\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,11 +89,6 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)..\3DEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\Output\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -125,14 +124,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="TestCommon.cpp" />
+    <ClCompile Include="TestEntry.cpp" />
     <ClCompile Include="TestMain.cpp" />
     <ClCompile Include="TestMemoryPool.h" />
     <ClCompile Include="TestPlatform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestCommon.h" />
+    <ClInclude Include="TestEntry.h" />
     <ClInclude Include="TestLog.h" />
     <ClInclude Include="TestMath.h" />
+    <ClInclude Include="TestTexture.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\3DEngine\3DEngine.vcxproj">
