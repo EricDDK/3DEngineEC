@@ -93,6 +93,9 @@
     <ClInclude Include="Component\MoveComponent.h">
       <Filter>Component</Filter>
     </ClInclude>
+    <ClInclude Include="Render\VertexArray.h">
+      <Filter>Render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
@@ -125,6 +128,9 @@
     </ClCompile>
     <ClCompile Include="Component\MoveComponent.cpp">
       <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\VertexArray.cpp">
+      <Filter>Render</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
