@@ -10,8 +10,10 @@ class TestTexture
 public:
 	void testTexture()
 	{
-		engine::Texture t;
-		
+		engine::Texture tex;
+		tex.load("ImageFile.png");
+		tex.setActive();
+		tex.unload();
 	}
 };
 
