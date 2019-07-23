@@ -26,6 +26,7 @@
     <ClInclude Include="Common\Macro.h" />
     <ClInclude Include="Common\Shader.h" />
     <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Component\MoveComponent.h" />
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Math\MathCommon.h" />
     <ClInclude Include="Math\Matrix3.h" />
@@ -40,6 +41,7 @@
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp" />
     <ClCompile Include="Component\Component.cpp" />
+    <ClCompile Include="Component\MoveComponent.cpp" />
     <ClCompile Include="External\include\glad\glad.c" />
     <ClCompile Include="Math\Matrix3.cpp" />
     <ClCompile Include="Math\Matrix4.cpp" />
