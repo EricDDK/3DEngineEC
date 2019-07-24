@@ -72,6 +72,7 @@
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <IncludePath>$(ProjectDir)..\3DEngine\External\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\3DEngine\External\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
@@ -84,6 +85,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)..\3DEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
