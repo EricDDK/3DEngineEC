@@ -5,6 +5,9 @@
 
 ENGINE_NAMESPACE_START
 
+class Quaternion;
+class Matrix4;
+
 class Vector3
 {
 public:
@@ -60,6 +63,10 @@ public:
 	static float dot(const Vector3& lhs, const Vector3& rhs);
 
 	static Vector3 cross(const Vector3& lhs, const Vector3& rhs);
+
+	static Vector3 transform(const Vector3& v, const Quaternion& q);
+
+	static Vector3 transform(const Vector3& v, const Matrix4& m, float w = 1.0f);
 
 	static const Vector3 Zero;
 	static const Vector3 UnitX;

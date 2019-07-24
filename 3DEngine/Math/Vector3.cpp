@@ -1,4 +1,5 @@
 #include "Math/Vector3.h"
+#include "Quaternion.h"
 #include <cmath>
 #include "MathCommon.h"
 
@@ -153,6 +154,22 @@ Vector3 Vector3::cross(const Vector3& lhs, const Vector3& rhs)
 	result.x = lhs.y * rhs.z - lhs.z * rhs.y;
 	result.y = lhs.z * rhs.x - lhs.x * rhs.z;
 	result.z = lhs.x * rhs.y - lhs.y * rhs.x;
+	return result;
+}
+
+Vector3 Vector3::transform(const Vector3& v, const Quaternion& q)
+{
+	Vector3 result = v;
+	Vector3 qv(q.x, q.y, q.z);
+	result += Vector3::cross(qv, Vector3::cross(qv, v) + v * q.w) * 2.0f;
+	return result;
+}
+
+Vector3 Vector3::transform(const Vector3& v, const Matrix4& m, float w)
+{
+	Vector3 result;
+	// TODO
+	EC_ASSERT(0 == 1);
 	return result;
 }
 

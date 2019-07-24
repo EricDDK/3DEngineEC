@@ -3,7 +3,7 @@
 
 #include "TestCommon.h"
 #include "Common/3DEngine.h"
-#include "Engine/Texture.h"
+#include "Render/Texture.h"
 
 class TestTexture
 {
@@ -11,7 +11,8 @@ public:
 	void testTexture()
 	{
 		engine::Texture tex;
-		tex.load("ImageFile.png");
+		auto loadSuccess = tex.load("ImageFile.png");
+		EXPECT(loadSuccess, true);
 		tex.setActive();
 		tex.unload();
 	}
