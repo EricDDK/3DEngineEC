@@ -33,6 +33,8 @@ public:
 
 	void updateComponents(float deltaTime);
 
+	virtual void updateGameObject(float deltaTime);
+
 	// callded from Game
 	void processInput(const unsigned char* keyState);
 
@@ -78,7 +80,7 @@ protected:
 
 	float _scale;
 
-	bool _reComputerMat4;
+	bool _reComputeMat4;
 
 	std::vector<Component *> _components;
 

@@ -30,6 +30,11 @@ void Component::processInput(const unsigned char* keyState)
 
 }
 
+void Component::onUpdateWorldTransform()
+{
+
+}
+
 void Component::setOwner(GameObject *owner)
 {
 	if (_owner)
