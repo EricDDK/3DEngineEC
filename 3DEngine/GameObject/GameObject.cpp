@@ -6,18 +6,36 @@
 ENGINE_NAMESPACE_START
 
 GameObject::GameObject()
+	:_state(Active)
+	, _position(0.0f, 0.0f, 0.0f)
+	, _rotation(Quaternion::Identity)
+	, _worldTransform(Matrix4::Identity)
+	, _scale(1.0f)
+	, _reComputeMat4(true)
 {
-
+	// TODO
+	// addActor
 }
 
 GameObject::~GameObject()
 {
-
+	// TODO
+	// removeActor
+	for (auto& c : _components)
+	{
+		delete c;
+	}
 }
 
 void GameObject::update(float deltaTime)
 {
-
+	if (_state == Active)
+	{
+		computeWorldTransform();
+		updateComponents(deltaTime);
+		updateGameObject(deltaTime);
+		computeWorldTransform();
+	}
 }
 
 void GameObject::updateComponents(float deltaTime)
@@ -25,9 +43,21 @@ void GameObject::updateComponents(float deltaTime)
 
 }
 
-void GameObject::processInput(const unsigned char* keyState)
+void GameObject::updateGameObject(float deltaTime)
 {
 
+}
+
+void GameObject::processInput(const unsigned char* keyState)
+{
+	if (_state == Active)
+	{
+		for (auto& c : _components)
+		{
+			c->processInput(keyState);
+		}
+		gameObjectInput(keyState);
+	}
 }
 
 void GameObject::gameObjectInput(const unsigned char* keyState)
@@ -38,7 +68,7 @@ void GameObject::gameObjectInput(const unsigned char* keyState)
 void GameObject::setPosition(const Vector3& pos)
 {
 	_position = pos;
-	_reComputerMat4 = true;
+	_reComputeMat4 = true;
 }
 
 const Vector3& GameObject::getPosition() const
@@ -49,7 +79,7 @@ const Vector3& GameObject::getPosition() const
 void GameObject::setRotation(const Quaternion& q)
 {
 	_rotation = q;
-	_reComputerMat4 = true;
+	_reComputeMat4 = true;
 }
 
 const Quaternion& GameObject::getRotation() const
@@ -60,7 +90,7 @@ const Quaternion& GameObject::getRotation() const
 void GameObject::setScale(float scale)
 {
 	_scale = scale;
-	_reComputerMat4 = true;
+	_reComputeMat4 = true;
 }
 
 float GameObject::getScale() const
@@ -75,7 +105,19 @@ const Matrix4& GameObject::getWorldTransform() const
 
 void GameObject::computeWorldTransform()
 {
+	if (_reComputeMat4)
+	{
+		// the calculate sequence is important and order must be this.
+		_worldTransform = Matrix4::createScale(_scale);
+		_worldTransform *= Matrix4::createQueternion(_rotation);
+		_worldTransform *= Matrix4::createTranslation(_position);
 
+		for (auto& c : _components)
+		{
+			c->onUpdateWorldTransform();
+		}
+		_reComputeMat4 = false;
+	}
 }
 
 void GameObject::setState(State state)

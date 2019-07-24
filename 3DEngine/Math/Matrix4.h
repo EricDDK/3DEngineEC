@@ -6,6 +6,8 @@
 
 ENGINE_NAMESPACE_START
 
+class Quaternion;
+
 class Matrix4
 {
 public:
@@ -30,6 +32,8 @@ public:
 	static Matrix4 createScale(const Vector3& scale);
 
 	static Matrix4 createScale(float scale);
+
+	static Matrix4 createQueternion(const Quaternion& q);
 
 	static Matrix4 createRotationX(float theta);
 

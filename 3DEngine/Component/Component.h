@@ -19,6 +19,8 @@ public:
 
 	virtual void processInput(const unsigned char* keyState);
 
+	virtual void onUpdateWorldTransform();
+
 	void setOwner(GameObject *owner);
 
 	GameObject *getOwner() const;
