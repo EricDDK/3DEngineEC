@@ -37,6 +37,9 @@
     <Filter Include="Base\MemoryPool">
       <UniqueIdentifier>{1f74671a-ba9d-4861-91eb-034b7153fe97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{67727bb0-ade8-42bd-9bc3-57f70fd359f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Shader.h">
@@ -96,8 +99,11 @@
     <ClInclude Include="Render\VertexArray.h">
       <Filter>Render</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Texture.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Render\Texture.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\GameObject.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -135,11 +141,14 @@
     <ClCompile Include="Render\VertexArray.cpp">
       <Filter>Render</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Texture.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Common\Log.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Texture.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\GameObject.cpp">
+      <Filter>GameObject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
