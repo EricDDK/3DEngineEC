@@ -11,7 +11,7 @@ class Component
 public:
 	Component();
 
-	Component(GameObject *owner, int order);
+	Component(GameObject *gameObject, int order);
 
 	virtual ~Component();
 
@@ -21,9 +21,9 @@ public:
 
 	virtual void onUpdateWorldTransform();
 
-	void setOwner(GameObject *owner);
+	void setgameObject(GameObject *gameObject);
 
-	GameObject *getOwner() const;
+	GameObject *getgameObject() const;
 
 	void setOrder(int order);
 
@@ -31,7 +31,7 @@ public:
 
 protected:
 
-	GameObject *_owner;
+	GameObject *_gameObject;
 
 	int _order;
 };

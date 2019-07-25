@@ -3,8 +3,8 @@
 
 ENGINE_NAMESPACE_START
 
-MoveComponent::MoveComponent(GameObject *owner, int order)
-	:Component(owner, order)
+MoveComponent::MoveComponent(GameObject *gameObject, int order)
+	:Component(gameObject, order)
 	, _angularSpeed(0.0f)
 	, _forwardSpeed(0.0f)
 	, _rightSpeed(0.0f)
@@ -21,19 +21,19 @@ void MoveComponent::update(float deltaTime)
 {
 	if (!math::nearZero(_angularSpeed))
 	{
-		Quaternion rotate = _owner->getRotation();
+		Quaternion rotate = _gameObject->getRotation();
 		float angle = _angularSpeed * deltaTime;
 		Quaternion inc(Vector3::UnitZ, angle);
 		rotate = Quaternion::concatenate(rotate, inc);
-		_owner->setRotation(rotate);
+		_gameObject->setRotation(rotate);
 	}
 
 	if (!math::nearZero(_forwardSpeed) || !math::nearZero(_rightSpeed))
 	{
-		Vector3 pos = _owner->getPosition();
-		pos += _owner->getForward() * _forwardSpeed * deltaTime;
-		pos += _owner->getRight() * _rightSpeed * deltaTime;
-		_owner->setPosition(pos);
+		Vector3 pos = _gameObject->getPosition();
+		pos += _gameObject->getForward() * _forwardSpeed * deltaTime;
+		pos += _gameObject->getRight() * _rightSpeed * deltaTime;
+		_gameObject->setPosition(pos);
 	}
 }
 
