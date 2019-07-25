@@ -111,6 +111,11 @@ bool Vector3::operator!=(const Vector3& v)
 	return !((*this) == v);
 }
 
+const float * Vector3::getShaderPtr() const
+{
+	return reinterpret_cast<const float*>(&x);
+}
+
 Vector3 Vector3::lerp(const Vector3& other, float alpha) const
 {
 	return *this * (1.f - alpha) + other * alpha;

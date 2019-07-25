@@ -139,6 +139,11 @@ Matrix4 Matrix4::operator*=(const Matrix4 & rhs)
 	return *this;
 }
 
+const float * Matrix4::getShaderPtr() const
+{
+	return reinterpret_cast<const float*>(&mat[0][0]);
+}
+
 void Matrix4::invert()
 {
 	float tmp[12];

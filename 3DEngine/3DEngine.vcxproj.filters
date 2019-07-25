@@ -108,6 +108,9 @@
     <ClInclude Include="Component\SpriteComponent.h">
       <Filter>Component</Filter>
     </ClInclude>
+    <ClInclude Include="Render\Shader.h">
+      <Filter>Render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
@@ -155,6 +158,9 @@
     </ClCompile>
     <ClCompile Include="Component\SpriteComponent.cpp">
       <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Shader.cpp">
+      <Filter>Render</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

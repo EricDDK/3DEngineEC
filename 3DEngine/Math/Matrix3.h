@@ -23,6 +23,8 @@ public:
 
 	Matrix3 operator*=(const Matrix3& rhs);
 
+	const float *getShaderPtr() const;
+
 	static Matrix3 createScale(float xScale, float yScale);
 
 	static Matrix3 createScale(const Vector2& scale);
