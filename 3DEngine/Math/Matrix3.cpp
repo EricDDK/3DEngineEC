@@ -84,6 +84,11 @@ Matrix3 Matrix3::operator*=(const Matrix3& rhs)
 	return *this;
 }
 
+const float * Matrix3::getShaderPtr() const
+{
+	return reinterpret_cast<const float*>(&mat[0][0]);
+}
+
 Matrix3 Matrix3::createScale(float xScale, float yScale)
 {
 	Matrix3 result;

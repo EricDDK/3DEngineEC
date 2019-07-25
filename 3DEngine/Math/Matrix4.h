@@ -25,6 +25,8 @@ public:
 
 	Matrix4 operator*=(const Matrix4& rhs);
 
+	const float *getShaderPtr() const;
+
 	void invert();
 
 	static Matrix4 createScale(float xScale, float yScale, float zScale);

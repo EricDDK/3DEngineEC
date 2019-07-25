@@ -39,6 +39,7 @@
     <ClInclude Include="Math\Vector3.h" />
     <ClInclude Include="Math\VectorUtil.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
+    <ClInclude Include="Render\Shader.h" />
     <ClInclude Include="Render\Texture.h" />
     <ClInclude Include="Render\VertexArray.h" />
   </ItemGroup>
@@ -57,6 +58,7 @@
     <ClCompile Include="Math\Vector2.cpp" />
     <ClCompile Include="Math\Vector3.cpp" />
     <ClCompile Include="Math\VectorUtil.cpp" />
+    <ClCompile Include="Render\Shader.cpp" />
     <ClCompile Include="Render\Texture.cpp" />
     <ClCompile Include="Render\VertexArray.cpp" />
   </ItemGroup>

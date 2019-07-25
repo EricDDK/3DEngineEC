@@ -52,6 +52,8 @@ public:
 
 	bool operator!=(const Vector3& v);
 
+	const float *getShaderPtr() const;
+
 	Vector3 lerp(const Vector3& other, float alpha) const;
 
 	float distance();

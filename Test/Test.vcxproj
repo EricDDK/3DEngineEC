@@ -138,6 +138,7 @@
     <ClInclude Include="TestEntry.h" />
     <ClInclude Include="TestLog.h" />
     <ClInclude Include="TestMath.h" />
+    <ClInclude Include="TestShader.h" />
     <ClInclude Include="TestTexture.h" />
   </ItemGroup>
   <ItemGroup>
