@@ -2,13 +2,14 @@
 #define _COMPONENT_MOVECOMPONENT_H__
 
 #include "../Common/Macro.h"
+#include "Component.h"
 
 ENGINE_NAMESPACE_START
 
-class MoveComponent
+class MoveComponent : public Component
 {
 public:
-	MoveComponent();
+	MoveComponent(GameObject *owner, int order);
 
 	~MoveComponent();
 
@@ -22,11 +23,17 @@ public:
 
 	float getForwardSpeed() const;
 
+	void setRightSpeed(float rightSpeend);
+
+	float getRightSpeed() const;
+
 protected:
 
 	float _angularSpeed;
 
 	float _forwardSpeed;
+
+	float _rightSpeed;
 
 };
 
