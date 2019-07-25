@@ -9,7 +9,7 @@ ENGINE_NAMESPACE_START
 class MoveComponent : public Component
 {
 public:
-	MoveComponent(GameObject *owner, int order);
+	MoveComponent(GameObject *gameObject, int order);
 
 	~MoveComponent();
 

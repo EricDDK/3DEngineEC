@@ -8,16 +8,16 @@ Component::Component()
 
 }
 
-Component::Component(GameObject *owner, int order = 0)
-	:_owner(owner)
+Component::Component(GameObject *gameObject, int order = 0)
+	:_gameObject(gameObject)
 	,_order(order)
 {
-	_owner->addComponent(this);
+	_gameObject->addComponent(this);
 }
 
 Component::~Component()
 {
-	_owner->removeComponent(this);
+	_gameObject->removeComponent(this);
 }
 
 void Component::update(float deltaTime)
@@ -35,19 +35,19 @@ void Component::onUpdateWorldTransform()
 
 }
 
-void Component::setOwner(GameObject *owner)
+void Component::setgameObject(GameObject *gameObject)
 {
-	if (_owner)
+	if (_gameObject)
 	{
-		_owner->removeComponent(this);
+		_gameObject->removeComponent(this);
 	}
-	_owner = owner;
-	owner->addComponent(this);
+	_gameObject = gameObject;
+	gameObject->addComponent(this);
 }
 
-GameObject *Component::getOwner() const
+GameObject *Component::getgameObject() const
 {
-	return _owner;
+	return _gameObject;
 }
 
 void Component::setOrder(int order)
