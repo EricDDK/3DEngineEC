@@ -28,9 +28,6 @@
     <Filter Include="Component">
       <UniqueIdentifier>{4cd160dd-c843-43f8-bee2-d0ac09587754}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine">
-      <UniqueIdentifier>{3bffdb40-7e42-4c9b-b859-b7d52c33dd8b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Base">
       <UniqueIdentifier>{6f72d1ae-85b6-41d7-ad1e-f9df63360e02}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,9 @@
     </Filter>
     <Filter Include="GameObject">
       <UniqueIdentifier>{67727bb0-ade8-42bd-9bc3-57f70fd359f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{0b870d1f-fa84-4d97-b43f-0ed483110bfc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +111,9 @@
     <ClInclude Include="Render\Shader.h">
       <Filter>Render</Filter>
     </ClInclude>
+    <ClInclude Include="UI\Font.h">
+      <Filter>UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
@@ -161,6 +164,9 @@
     </ClCompile>
     <ClCompile Include="Render\Shader.cpp">
       <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Font.cpp">
+      <Filter>UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
