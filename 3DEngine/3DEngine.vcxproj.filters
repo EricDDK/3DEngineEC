@@ -105,6 +105,9 @@
     <ClInclude Include="GameObject\GameObject.h">
       <Filter>GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="Component\SpriteComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Shader.cpp">
@@ -149,6 +152,9 @@
     </ClCompile>
     <ClCompile Include="GameObject\GameObject.cpp">
       <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\SpriteComponent.cpp">
+      <Filter>Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

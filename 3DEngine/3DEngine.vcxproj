@@ -27,6 +27,7 @@
     <ClInclude Include="Common\Shader.h" />
     <ClInclude Include="Component\Component.h" />
     <ClInclude Include="Component\MoveComponent.h" />
+    <ClInclude Include="Component\SpriteComponent.h" />
     <ClInclude Include="GameObject\GameObject.h" />
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Math\MathCommon.h" />
@@ -46,6 +47,7 @@
     <ClCompile Include="Common\Shader.cpp" />
     <ClCompile Include="Component\Component.cpp" />
     <ClCompile Include="Component\MoveComponent.cpp" />
+    <ClCompile Include="Component\SpriteComponent.cpp" />
     <ClCompile Include="External\include\glad\glad.c" />
     <ClCompile Include="GameObject\GameObject.cpp" />
     <ClCompile Include="Math\Matrix3.cpp" />
