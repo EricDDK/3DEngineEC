@@ -22,9 +22,9 @@
     <ClInclude Include="Base\MemoryPool\MemoryPool.h" />
     <ClInclude Include="Base\MemoryPool\MemoryTool.h" />
     <ClInclude Include="Common\3DEngine.h" />
+    <ClInclude Include="Common\AABB.h" />
     <ClInclude Include="Common\Log.h" />
     <ClInclude Include="Common\Macro.h" />
-    <ClInclude Include="Common\Shader.h" />
     <ClInclude Include="Component\Component.h" />
     <ClInclude Include="Component\MoveComponent.h" />
     <ClInclude Include="Component\SpriteComponent.h" />
@@ -45,8 +45,8 @@
     <ClInclude Include="UI\Font.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Common\AABB.cpp" />
     <ClCompile Include="Common\Log.cpp" />
-    <ClCompile Include="Common\Shader.cpp" />
     <ClCompile Include="Component\Component.cpp" />
     <ClCompile Include="Component\MoveComponent.cpp" />
     <ClCompile Include="Component\SpriteComponent.cpp" />

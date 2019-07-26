@@ -42,9 +42,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Common\Shader.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="Common\3DEngine.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -114,11 +111,11 @@
     <ClInclude Include="UI\Font.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="Common\AABB.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Common\Shader.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="Math\Vector2.cpp">
       <Filter>Math</Filter>
     </ClCompile>
@@ -167,6 +164,9 @@
     </ClCompile>
     <ClCompile Include="UI\Font.cpp">
       <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\AABB.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
