@@ -14,5 +14,6 @@
     <ClInclude Include="TestEntry.h" />
     <ClInclude Include="TestTexture.h" />
     <ClInclude Include="TestShader.h" />
+    <ClInclude Include="TestCollision.h" />
   </ItemGroup>
 </Project>

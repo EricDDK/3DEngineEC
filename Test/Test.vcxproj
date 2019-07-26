@@ -134,6 +134,7 @@
     <ClCompile Include="TestPlatform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TestCollision.h" />
     <ClInclude Include="TestCommon.h" />
     <ClInclude Include="TestEntry.h" />
     <ClInclude Include="TestLog.h" />

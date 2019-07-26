@@ -1,5 +1,6 @@
 #include "TestEntry.h"
 
+#include "TestCollision.h"
 #include "TestLog.h"
 #include "TestMath.h"
 #include "TestMemoryPool.h"
@@ -9,6 +10,9 @@
 
 void testEntry()
 {
+	TestCollision testCollision;
+	testCollision.testCollision();
+
 	TestLog testLog; 
 	testLog.testLog();
 
