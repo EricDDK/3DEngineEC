@@ -1,5 +1,6 @@
 #include "Math/Vector3.h"
 #include "Quaternion.h"
+#include "Matrix4.h"
 #include <cmath>
 #include "MathCommon.h"
 
@@ -173,8 +174,13 @@ Vector3 Vector3::transform(const Vector3& v, const Quaternion& q)
 Vector3 Vector3::transform(const Vector3& v, const Matrix4& m, float w)
 {
 	Vector3 result;
-	// TODO
-	EC_ASSERT(0 == 1);
+	result.x = v.x * m.mat[0][0] + v.y * m.mat[1][0] +
+		v.z * m.mat[2][0] + w * m.mat[3][0];
+	result.y = v.x * m.mat[0][1] + v.y * m.mat[1][1] +
+		v.z * m.mat[2][1] + w * m.mat[3][1];
+	result.z = v.x * m.mat[0][2] + v.y * m.mat[1][2] +
+		v.z * m.mat[2][2] + w * m.mat[3][2];
+	//ignore w since we aren't returning a new value for it...
 	return result;
 }
 

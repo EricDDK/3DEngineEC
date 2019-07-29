@@ -19,7 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\Bone.h" />
     <ClInclude Include="Animation\BoneTransform.h" />
+    <ClInclude Include="Animation\Skeleton.h" />
     <ClInclude Include="Base\MemoryPool\MemoryPool.h" />
     <ClInclude Include="Base\MemoryPool\MemoryTool.h" />
     <ClInclude Include="Common\3DEngine.h" />
@@ -46,7 +48,9 @@
     <ClInclude Include="UI\Font.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation\Bone.cpp" />
     <ClCompile Include="Animation\BoneTransform.cpp" />
+    <ClCompile Include="Animation\Skeleton.cpp" />
     <ClCompile Include="Common\AABB.cpp" />
     <ClCompile Include="Common\Log.cpp" />
     <ClCompile Include="Component\Component.cpp" />

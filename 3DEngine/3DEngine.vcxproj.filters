@@ -120,6 +120,12 @@
     <ClInclude Include="Animation\BoneTransform.h">
       <Filter>Animation</Filter>
     </ClInclude>
+    <ClInclude Include="Animation\Bone.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\Skeleton.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Vector2.cpp">
@@ -175,6 +181,12 @@
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="Animation\BoneTransform.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\Bone.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\Skeleton.cpp">
       <Filter>Animation</Filter>
     </ClCompile>
   </ItemGroup>
