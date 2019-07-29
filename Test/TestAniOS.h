@@ -3,6 +3,7 @@
 
 #include "TestCommon.h"
 #include "Animation/Skeleton.h"
+#include "Animation/Animation.h"
 
 class TestAniOS
 {
@@ -11,6 +12,7 @@ public:
 	void testAniOS()
 	{
 		testSkeleton();
+		testAnimation();
 	}
 
 private:
@@ -19,6 +21,12 @@ private:
 	{
 		engine::Skeleton skeleton;
 		skeleton.load("");
+	}
+
+	void testAnimation()
+	{
+		engine::Animation animation;
+		animation.load("");
 	}
 
 };

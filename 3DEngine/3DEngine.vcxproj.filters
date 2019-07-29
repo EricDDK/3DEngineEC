@@ -126,6 +126,9 @@
     <ClInclude Include="Animation\Skeleton.h">
       <Filter>Animation</Filter>
     </ClInclude>
+    <ClInclude Include="Animation\Animation.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Vector2.cpp">
@@ -187,6 +190,9 @@
       <Filter>Animation</Filter>
     </ClCompile>
     <ClCompile Include="Animation\Skeleton.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\Animation.cpp">
       <Filter>Animation</Filter>
     </ClCompile>
   </ItemGroup>

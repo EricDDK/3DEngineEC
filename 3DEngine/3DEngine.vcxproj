@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\Animation.h" />
     <ClInclude Include="Animation\Bone.h" />
     <ClInclude Include="Animation\BoneTransform.h" />
     <ClInclude Include="Animation\Skeleton.h" />
@@ -48,6 +49,7 @@
     <ClInclude Include="UI\Font.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation\Animation.cpp" />
     <ClCompile Include="Animation\Bone.cpp" />
     <ClCompile Include="Animation\BoneTransform.cpp" />
     <ClCompile Include="Animation\Skeleton.cpp" />
