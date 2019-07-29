@@ -133,6 +133,9 @@
       <Filter>Component</Filter>
     </ClInclude>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Component\BoxComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Vector2.cpp">
@@ -203,5 +206,8 @@
       <Filter>Component</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Component\BoxComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
