@@ -70,6 +70,8 @@ public:
 
 	static Vector3 transform(const Vector3& v, const Matrix4& m, float w = 1.0f);
 
+	static Vector3 lerp(const Vector3& a, const Vector3& b, float f);
+
 	static const Vector3 Zero;
 	static const Vector3 UnitX;
 	static const Vector3 UnitY;
