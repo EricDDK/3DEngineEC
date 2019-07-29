@@ -11,7 +11,7 @@ bool Skeleton::load(const std::string& fileName)
 	std::ifstream file(fileName);
 	if (!file.is_open())
 	{
-		log("File not found: Skeleton %s", fileName.c_str());
+		log("File not found: name = %s", fileName.c_str());
 		return false;
 	}
 

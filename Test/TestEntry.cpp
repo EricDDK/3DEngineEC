@@ -1,5 +1,6 @@
 #include "TestEntry.h"
 
+#include "TestAniOS.h"
 #include "TestCollision.h"
 #include "TestLog.h"
 #include "TestMath.h"
@@ -10,6 +11,9 @@
 
 void testEntry()
 {
+	TestAniOS testAniOS;
+	testAniOS.testAniOS();
+
 	TestCollision testCollision;
 	testCollision.testCollision();
 
