@@ -40,6 +40,9 @@
     <Filter Include="UI">
       <UniqueIdentifier>{0b870d1f-fa84-4d97-b43f-0ed483110bfc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{323453cc-3f1a-4889-bec3-5af99203bd69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\3DEngine.h">
@@ -114,6 +117,9 @@
     <ClInclude Include="Common\AABB.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="Animation\BoneTransform.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Vector2.cpp">
@@ -167,6 +173,9 @@
     </ClCompile>
     <ClCompile Include="Common\AABB.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\BoneTransform.cpp">
+      <Filter>Animation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

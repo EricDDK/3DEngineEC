@@ -178,6 +178,11 @@ Vector3 Vector3::transform(const Vector3& v, const Matrix4& m, float w)
 	return result;
 }
 
+Vector3 Vector3::lerp(const Vector3 & a, const Vector3 & b, float f)
+{
+	return Vector3(a + (b - a) * f);
+}
+
 const Vector3 Vector3::Zero(0.0f, 0.0f, 0.0f);
 const Vector3 Vector3::UnitX(1.0f, 0.0f, 0.0f);
 const Vector3 Vector3::UnitY(0.0f, 1.0f, 0.0f);
