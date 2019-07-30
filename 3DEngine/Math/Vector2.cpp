@@ -107,7 +107,12 @@ Vector2 Vector2::lerp(const Vector2& other, float alpha) const
 	return *this * (1.f - alpha) + other * alpha;
 }
 
-float Vector2::distance()
+float Vector2::lengthSq()
+{
+	return x * x + y * y;
+}
+
+float Vector2::length()
 {
 	float n = x * x + y * y;
 	return std::sqrt(n);
@@ -124,6 +129,11 @@ void Vector2::normalize()
 	n = 1.0f / n;
 	x *= n;
 	y *= n;
+}
+
+float Vector2::dot(const Vector2& a, const Vector2& b)
+{
+	return (a.x * b.x + a.y * b.y);
 }
 
 ENGINE_NAMESPACE_END
