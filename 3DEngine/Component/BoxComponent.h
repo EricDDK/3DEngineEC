@@ -3,7 +3,7 @@
 
 #include "../Common/Macro.h"
 #include "Component.h"
-#include "../Common/AABB.h"
+#include "../Physics/AABB.h"
 
 ENGINE_NAMESPACE_START
 

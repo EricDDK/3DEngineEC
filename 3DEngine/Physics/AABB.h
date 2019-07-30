@@ -1,5 +1,5 @@
-#ifndef _COMMON_AABB_H__
-#define _COMMON_AABB_H__
+#ifndef _PHYSICS_AABB_H__
+#define _PHYSICS_AABB_H__
 
 #include "../Common/Macro.h"
 #include "../Math/Math.h"
