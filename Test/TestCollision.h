@@ -2,7 +2,7 @@
 #define _TEST_COLLISION_H__
 
 #include "TestCommon.h"
-#include "Common/AABB.h"
+#include "Physics/AABB.h"
 
 class TestCollision
 {

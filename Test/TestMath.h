@@ -39,9 +39,9 @@ private:
 		v1 = v2;
 		EXPECT(v1.x, 0.0f);
 		EXPECT(v1.y, 0.0f);
-		auto d = v.distance();
+		auto d = v.length();
 		v.normalize();
-		d = v.distance();
+		d = v.length();
 		v1 += v2;
 		EXPECT(v1.x, 0.0f);
 		EXPECT(v1.y, 0.0f);
@@ -67,9 +67,9 @@ private:
 		EXPECT(v1.x, 0.0f);
 		EXPECT(v1.y, 0.0f);
 		EXPECT(v1.z, 0.0f);
-		auto d = v.distance();
+		auto d = v.length();
 		v.normalize();
-		d = v.distance();
+		d = v.length();
 		v1 += v2;
 		EXPECT(v1.x, 0.0f);
 		EXPECT(v1.y, 0.0f);
