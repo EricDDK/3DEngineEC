@@ -46,6 +46,7 @@
     <ClInclude Include="Math\VectorUtil.h" />
     <ClInclude Include="Physics\AABB.h" />
     <ClInclude Include="Physics\Capsule.h" />
+    <ClInclude Include="Physics\Collision.h" />
     <ClInclude Include="Physics\ConvexPolygon.h" />
     <ClInclude Include="Physics\LineSegment.h" />
     <ClInclude Include="Physics\OBB.h" />
@@ -80,6 +81,7 @@
     <ClCompile Include="Math\VectorUtil.cpp" />
     <ClCompile Include="Physics\AABB.cpp" />
     <ClCompile Include="Physics\Capsule.cpp" />
+    <ClCompile Include="Physics\Collision.cpp" />
     <ClCompile Include="Physics\ConvexPolygon.cpp" />
     <ClCompile Include="Physics\LineSegment.cpp" />
     <ClCompile Include="Physics\OBB.cpp" />
