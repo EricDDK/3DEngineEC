@@ -122,7 +122,12 @@ Vector3 Vector3::lerp(const Vector3& other, float alpha) const
 	return *this * (1.f - alpha) + other * alpha;
 }
 
-float Vector3::distance()
+float Vector3::lengthSq()
+{
+	return x * x + y * y + z * z;
+}
+
+float Vector3::length()
 {
 	float n = x * x + y * y + z * z;
 	return std::sqrt(n);

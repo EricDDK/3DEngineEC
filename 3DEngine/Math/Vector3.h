@@ -56,7 +56,9 @@ public:
 
 	Vector3 lerp(const Vector3& other, float alpha) const;
 
-	float distance();
+	float lengthSq();
+
+	float length();
 
 	void normalize();
 
