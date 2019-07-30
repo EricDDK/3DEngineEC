@@ -114,9 +114,6 @@
     <ClInclude Include="UI\Font.h">
       <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="Common\AABB.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="Animation\BoneTransform.h">
       <Filter>Animation</Filter>
     </ClInclude>
@@ -135,6 +132,27 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Component\BoxComponent.h">
       <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\AABB.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\OBB.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\LineSegment.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Plane.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Sphere.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Capsule.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\ConvexPolygon.h">
+      <Filter>Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -187,9 +205,6 @@
     <ClCompile Include="UI\Font.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="Common\AABB.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="Animation\BoneTransform.cpp">
       <Filter>Animation</Filter>
     </ClCompile>
@@ -208,6 +223,27 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Component\BoxComponent.cpp">
       <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\AABB.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\OBB.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\LineSegment.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Plane.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Sphere.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Capsule.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\ConvexPolygon.cpp">
+      <Filter>Physics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

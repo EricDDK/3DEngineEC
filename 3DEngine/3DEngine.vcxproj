@@ -26,7 +26,6 @@
     <ClInclude Include="Base\MemoryPool\MemoryPool.h" />
     <ClInclude Include="Base\MemoryPool\MemoryTool.h" />
     <ClInclude Include="Common\3DEngine.h" />
-    <ClInclude Include="Common\AABB.h" />
     <ClInclude Include="Common\Log.h" />
     <ClInclude Include="Common\Macro.h" />
     <ClInclude Include="Component\BoxComponent.h" />
@@ -45,6 +44,13 @@
     <ClInclude Include="Math\Vector2.h" />
     <ClInclude Include="Math\Vector3.h" />
     <ClInclude Include="Math\VectorUtil.h" />
+    <ClInclude Include="Physics\AABB.h" />
+    <ClInclude Include="Physics\Capsule.h" />
+    <ClInclude Include="Physics\ConvexPolygon.h" />
+    <ClInclude Include="Physics\LineSegment.h" />
+    <ClInclude Include="Physics\OBB.h" />
+    <ClInclude Include="Physics\Plane.h" />
+    <ClInclude Include="Physics\Sphere.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
     <ClInclude Include="Render\Shader.h" />
     <ClInclude Include="Render\Texture.h" />
@@ -56,7 +62,6 @@
     <ClCompile Include="Animation\Bone.cpp" />
     <ClCompile Include="Animation\BoneTransform.cpp" />
     <ClCompile Include="Animation\Skeleton.cpp" />
-    <ClCompile Include="Common\AABB.cpp" />
     <ClCompile Include="Common\Log.cpp" />
     <ClCompile Include="Component\BoxComponent.cpp" />
     <ClCompile Include="Component\CameraComponent.cpp" />
@@ -73,6 +78,13 @@
     <ClCompile Include="Math\Vector2.cpp" />
     <ClCompile Include="Math\Vector3.cpp" />
     <ClCompile Include="Math\VectorUtil.cpp" />
+    <ClCompile Include="Physics\AABB.cpp" />
+    <ClCompile Include="Physics\Capsule.cpp" />
+    <ClCompile Include="Physics\ConvexPolygon.cpp" />
+    <ClCompile Include="Physics\LineSegment.cpp" />
+    <ClCompile Include="Physics\OBB.cpp" />
+    <ClCompile Include="Physics\Plane.cpp" />
+    <ClCompile Include="Physics\Sphere.cpp" />
     <ClCompile Include="Render\Shader.cpp" />
     <ClCompile Include="Render\Texture.cpp" />
     <ClCompile Include="Render\VertexArray.cpp" />
