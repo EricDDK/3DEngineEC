@@ -8,7 +8,9 @@
 
 ENGINE_NAMESPACE_START
 
-class SpriteComponent
+class Shader;
+
+class SpriteComponent : public Component
 {
 public:
 
@@ -18,7 +20,7 @@ public:
 
 	~SpriteComponent();
 
-	virtual void draw();
+	virtual void draw(Shader *shader);
 
 	virtual void setTexture(Texture *texture);
 

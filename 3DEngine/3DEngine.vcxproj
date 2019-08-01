@@ -28,13 +28,18 @@
     <ClInclude Include="Common\3DEngine.h" />
     <ClInclude Include="Common\Log.h" />
     <ClInclude Include="Common\Macro.h" />
+    <ClInclude Include="Common\Mesh.h" />
     <ClInclude Include="Component\BoxComponent.h" />
     <ClInclude Include="Component\CameraComponent.h" />
     <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Component\MeshComponent.h" />
     <ClInclude Include="Component\MoveComponent.h" />
+    <ClInclude Include="Component\SkeletalMeshComponent.h" />
     <ClInclude Include="Component\SpriteComponent.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject\GameObject.h" />
+    <ClInclude Include="GameObject\PlaneGameObject.h" />
+    <ClInclude Include="Light\DirectionalLight.h" />
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Math\MathCommon.h" />
     <ClInclude Include="Math\Matrix3.h" />
@@ -53,10 +58,13 @@
     <ClInclude Include="Physics\Plane.h" />
     <ClInclude Include="Physics\Sphere.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
+    <ClInclude Include="Render\Render.h" />
     <ClInclude Include="Render\Shader.h" />
     <ClInclude Include="Render\Texture.h" />
     <ClInclude Include="Render\VertexArray.h" />
+    <ClInclude Include="UI\Button.h" />
     <ClInclude Include="UI\Font.h" />
+    <ClInclude Include="UI\UIScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animation\Animation.cpp" />
@@ -64,14 +72,18 @@
     <ClCompile Include="Animation\BoneTransform.cpp" />
     <ClCompile Include="Animation\Skeleton.cpp" />
     <ClCompile Include="Common\Log.cpp" />
+    <ClCompile Include="Common\Mesh.cpp" />
     <ClCompile Include="Component\BoxComponent.cpp" />
     <ClCompile Include="Component\CameraComponent.cpp" />
     <ClCompile Include="Component\Component.cpp" />
+    <ClCompile Include="Component\MeshComponent.cpp" />
     <ClCompile Include="Component\MoveComponent.cpp" />
+    <ClCompile Include="Component\SkeletalMeshComponent.cpp" />
     <ClCompile Include="Component\SpriteComponent.cpp" />
-    <ClCompile Include="External\include\glad\glad.c" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject\GameObject.cpp" />
+    <ClCompile Include="GameObject\PlaneGameObject.cpp" />
+    <ClCompile Include="Light\DirectionalLight.cpp" />
     <ClCompile Include="Math\Matrix3.cpp" />
     <ClCompile Include="Math\Matrix4.cpp" />
     <ClCompile Include="Math\MatrixUtil.cpp" />
@@ -87,10 +99,22 @@
     <ClCompile Include="Physics\OBB.cpp" />
     <ClCompile Include="Physics\Plane.cpp" />
     <ClCompile Include="Physics\Sphere.cpp" />
+    <ClCompile Include="Render\Render.cpp" />
     <ClCompile Include="Render\Shader.cpp" />
     <ClCompile Include="Render\Texture.cpp" />
     <ClCompile Include="Render\VertexArray.cpp" />
+    <ClCompile Include="UI\Button.cpp" />
     <ClCompile Include="UI\Font.cpp" />
+    <ClCompile Include="UI\UIScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\BasicMesh.frag" />
+    <None Include="Shaders\BasicMesh.vert" />
+    <None Include="Shaders\Phong.frag" />
+    <None Include="Shaders\Phong.vert" />
+    <None Include="Shaders\Skinned.vert" />
+    <None Include="Shaders\Sprite.frag" />
+    <None Include="Shaders\Sprite.vert" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3893772E-78CE-49FC-B86F-AE13D09AE86C}</ProjectGuid>

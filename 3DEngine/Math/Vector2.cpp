@@ -136,4 +136,6 @@ float Vector2::dot(const Vector2& a, const Vector2& b)
 	return (a.x * b.x + a.y * b.y);
 }
 
+const Vector2 Vector2::Zero(0.0f ,0.0f);
+
 ENGINE_NAMESPACE_END

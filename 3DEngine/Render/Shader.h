@@ -4,7 +4,7 @@
 #include "../Common/Macro.h"
 #include <string>
 #include "../Math/Math.h"
-#include "glad/glad.h"
+#include <GL/glew.h>
 
 ENGINE_NAMESPACE_START
 
@@ -24,7 +24,7 @@ public:
 
 	void setMatrixUniform(const char* name, const Matrix4& matrix);
 
-	void setMatrixUniform(const char* name, const Matrix4& matrix, unsigned int count);
+	void setMatrixUniforms(const char* name, const Matrix4* matrix, unsigned int count);
 
 	void setVectorUniform(const char* name, const Vector3& vector);
 

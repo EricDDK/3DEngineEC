@@ -11,7 +11,7 @@ class Component
 public:
 	Component();
 
-	Component(GameObject *gameObject, int order);
+	Component(GameObject *gameObject, int order = 100);
 
 	virtual ~Component();
 
