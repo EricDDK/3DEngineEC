@@ -4,10 +4,17 @@
     <ClCompile Include="TestMain.cpp" />
     <ClCompile Include="TestMemoryPool.h" />
     <ClCompile Include="TestPlatform.h" />
+    <ClCompile Include="TestEntry.cpp" />
+    <ClCompile Include="TestCommon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestCommon.h" />
     <ClInclude Include="TestLog.h" />
     <ClInclude Include="TestMath.h" />
+    <ClInclude Include="TestEntry.h" />
+    <ClInclude Include="TestTexture.h" />
+    <ClInclude Include="TestShader.h" />
+    <ClInclude Include="TestCollision.h" />
+    <ClInclude Include="TestAniOS.h" />
   </ItemGroup>
 </Project>

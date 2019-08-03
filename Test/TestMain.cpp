@@ -1,23 +1,18 @@
 #include "iostream"
 
-#include "TestCommon.h"
-#include "TestLog.h"
-#include "TestMath.h"
-#include "TestMemoryPool.h"
-#include "TestPlatform.h"
+#include "TestEntry.h"
 
 int main(int argc, char** argv)
 {
 	// test start
 	{
-		TestLog testLog; testLog.testLog();
-		TestMath testMath; testMath.testMath();
-		TestMemoryPool testMemory; testMemory.testMemoryPool();
-		TestPlatform testPlatform; testPlatform.testPlatform();
+		testEntry();
 	}
 
-	std::cout << "test result : " << s_test->totalTest - s_test->totalError << "/" << s_test->totalTest << std::endl;
-	std::cout << "pass percent : " << (float)(s_test->totalTest - s_test->totalError) / (float)s_test->totalTest * 100.0f << "%" << std::endl;
+	auto totalTest = TestCommon::getInstance()->totalTest;
+	auto totalError = TestCommon::getInstance()->totalError;
+	std::cout << "test result : " << totalTest - totalError << "/" << totalTest << std::endl;
+	std::cout << "pass percent : " << (float)(totalTest - totalError) / (float)totalTest * 100.0f << "%" << std::endl;
 
 #ifdef _MSC_VER
 	system("pause");

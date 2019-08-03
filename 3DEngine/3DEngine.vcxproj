@@ -19,20 +19,76 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\Animation.h" />
+    <ClInclude Include="Animation\Bone.h" />
+    <ClInclude Include="Animation\BoneTransform.h" />
+    <ClInclude Include="Animation\Skeleton.h" />
     <ClInclude Include="Base\MemoryPool\MemoryPool.h" />
     <ClInclude Include="Base\MemoryPool\MemoryTool.h" />
     <ClInclude Include="Common\3DEngine.h" />
     <ClInclude Include="Common\Log.h" />
     <ClInclude Include="Common\Macro.h" />
-    <ClInclude Include="Common\Shader.h" />
+    <ClInclude Include="Component\BoxComponent.h" />
+    <ClInclude Include="Component\CameraComponent.h" />
+    <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Component\MoveComponent.h" />
+    <ClInclude Include="Component\SpriteComponent.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject\GameObject.h" />
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Math\MathCommon.h" />
+    <ClInclude Include="Math\Matrix3.h" />
+    <ClInclude Include="Math\Matrix4.h" />
+    <ClInclude Include="Math\MatrixUtil.h" />
+    <ClInclude Include="Math\Quaternion.h" />
     <ClInclude Include="Math\Vector2.h" />
+    <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Math\VectorUtil.h" />
+    <ClInclude Include="Physics\AABB.h" />
+    <ClInclude Include="Physics\Capsule.h" />
+    <ClInclude Include="Physics\ConvexPolygon.h" />
+    <ClInclude Include="Physics\LineSegment.h" />
+    <ClInclude Include="Physics\OBB.h" />
+    <ClInclude Include="Physics\Plane.h" />
+    <ClInclude Include="Physics\Sphere.h" />
     <ClInclude Include="Platform\PlatformConfig.h" />
+    <ClInclude Include="Render\Shader.h" />
+    <ClInclude Include="Render\Texture.h" />
+    <ClInclude Include="Render\VertexArray.h" />
+    <ClInclude Include="UI\Font.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Common\Shader.cpp" />
+    <ClCompile Include="Animation\Animation.cpp" />
+    <ClCompile Include="Animation\Bone.cpp" />
+    <ClCompile Include="Animation\BoneTransform.cpp" />
+    <ClCompile Include="Animation\Skeleton.cpp" />
+    <ClCompile Include="Common\Log.cpp" />
+    <ClCompile Include="Component\BoxComponent.cpp" />
+    <ClCompile Include="Component\CameraComponent.cpp" />
+    <ClCompile Include="Component\Component.cpp" />
+    <ClCompile Include="Component\MoveComponent.cpp" />
+    <ClCompile Include="Component\SpriteComponent.cpp" />
+    <ClCompile Include="External\include\glad\glad.c" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject\GameObject.cpp" />
+    <ClCompile Include="Math\Matrix3.cpp" />
+    <ClCompile Include="Math\Matrix4.cpp" />
+    <ClCompile Include="Math\MatrixUtil.cpp" />
+    <ClCompile Include="Math\Quaternion.cpp" />
     <ClCompile Include="Math\Vector2.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Math\VectorUtil.cpp" />
+    <ClCompile Include="Physics\AABB.cpp" />
+    <ClCompile Include="Physics\Capsule.cpp" />
+    <ClCompile Include="Physics\ConvexPolygon.cpp" />
+    <ClCompile Include="Physics\LineSegment.cpp" />
+    <ClCompile Include="Physics\OBB.cpp" />
+    <ClCompile Include="Physics\Plane.cpp" />
+    <ClCompile Include="Physics\Sphere.cpp" />
+    <ClCompile Include="Render\Shader.cpp" />
+    <ClCompile Include="Render\Texture.cpp" />
+    <ClCompile Include="Render\VertexArray.cpp" />
+    <ClCompile Include="UI\Font.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3893772E-78CE-49FC-B86F-AE13D09AE86C}</ProjectGuid>
@@ -88,6 +144,9 @@
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)External\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)External\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\Output\$(Configuration)\</OutDir>
@@ -98,8 +157,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)External\include</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

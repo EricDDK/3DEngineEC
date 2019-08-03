@@ -49,9 +49,14 @@ public:
 
 	Vector2 lerp(const Vector2& other, float alpha) const;
 
-	float distance();
+	float lengthSq();
+
+	float length();
 
 	void normalize();
+
+	static float dot(const Vector2& a, const Vector2& b);
+
 };
 
 ENGINE_NAMESPACE_END
