@@ -57,6 +57,8 @@ public:
 
 	static float dot(const Vector2& a, const Vector2& b);
 
+	static const Vector2 Zero;
+
 };
 
 ENGINE_NAMESPACE_END

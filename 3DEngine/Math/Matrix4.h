@@ -27,6 +27,8 @@ public:
 
 	const float *getShaderPtr() const;
 
+	Vector3 getTranslation() const;
+
 	void invert();
 
 	static Matrix4 createScale(float xScale, float yScale, float zScale);
@@ -50,6 +52,8 @@ public:
 	static Matrix4 createOrtho(float width, float height, float near, float far);
 
 	static Matrix4 createPerspective(float fovY, float width, float height, float near, float far);
+
+	static Matrix4 createSimpleViewProj(float width, float height);
 
 	static const Matrix4 Identity;
 };

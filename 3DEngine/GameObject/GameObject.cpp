@@ -5,13 +5,14 @@
 
 ENGINE_NAMESPACE_START
 
-GameObject::GameObject()
+GameObject::GameObject(Game* game)
 	:_state(Active)
 	, _position(0.0f, 0.0f, 0.0f)
 	, _rotation(Quaternion::Identity)
 	, _worldTransform(Matrix4::Identity)
 	, _scale(1.0f)
 	, _reComputeMat4(true)
+	, _game(game)
 {
 	// TODO
 	// addActor

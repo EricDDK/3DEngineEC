@@ -14,6 +14,7 @@
 ENGINE_NAMESPACE_START
 
 class Component;
+class Game;
 
 class GameObject
 {
@@ -25,7 +26,7 @@ public:
 		Pause,
 	};
 
-	GameObject();
+	GameObject(Game* game);
 
 	virtual ~GameObject();
 
@@ -69,6 +70,8 @@ public:
 	void removeComponent(Component *component);
 
 protected:
+
+	Game* _game;
 	
 	State _state;
 

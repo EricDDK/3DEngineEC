@@ -1,8 +1,10 @@
-#ifndef _RENDER_VERTEXARRAY_H__
-#define _RENDER_VERTEXARRAY_H__
+#ifndef _RENDER_TEXTURE_H__
+#define _RENDER_TEXTURE_H__
 
 #include "../Common/Macro.h"
 #include <string>
+#include <SDL/SDL.h>
+#include <SOIL/SOIL.h>
 
 ENGINE_NAMESPACE_START
 
@@ -23,6 +25,8 @@ public:
 	int getWidth() const;
 
 	int getHeight() const;
+
+	void createFromSurface(struct SDL_Surface* surface);
 
 private:
 

@@ -4,6 +4,7 @@
 #include <sstream>
 #include "../Common/Log.h"
 
+
 ENGINE_NAMESPACE_START
 
 Shader::Shader()
@@ -58,11 +59,11 @@ void Shader::setMatrixUniform(const char* name, const Matrix4& matrix)
 	glUniformMatrix4fv(location, 1, GL_TRUE, matrix.getShaderPtr());
 }
 
-void Shader::setMatrixUniform(const char* name, const Matrix4& matrix, unsigned int count)
+void Shader::setMatrixUniforms(const char* name, const Matrix4* matrix, unsigned int count)
 {
 	GLuint location = glGetUniformLocation(_shaderProgram, name);
 	// Send the matrix data to the uniform
-	glUniformMatrix4fv(location, count, GL_TRUE, matrix.getShaderPtr());
+	glUniformMatrix4fv(location, count, GL_TRUE, matrix->getShaderPtr());
 }
 
 void Shader::setVectorUniform(const char* name, const Vector3& vector)
