@@ -8,7 +8,7 @@ Component::Component()
 
 }
 
-Component::Component(GameObject *gameObject, int order = 0)
+Component::Component(GameObject *gameObject, int order)
 	:_gameObject(gameObject)
 	,_order(order)
 {

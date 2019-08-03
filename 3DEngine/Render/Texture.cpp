@@ -1,7 +1,7 @@
 #include "Texture.h"
 #include "Common/Log.h"
 
-#include "GLFW/glfw3.h"
+#include <GL/glew.h>
 #include "SDL/SDL.h"
 #include <SOIL/SOIL.h>
 
@@ -71,6 +71,22 @@ int Texture::getWidth() const
 int Texture::getHeight() const
 {
 	return _height;
+}
+
+void Texture::createFromSurface(struct SDL_Surface* surface)
+{
+	_width = surface->w;
+	_height = surface->h;
+
+	// Generate a GL texture
+	glGenTextures(1, &_textureID);
+	glBindTexture(GL_TEXTURE_2D, _textureID);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, _width, _height, 0, GL_BGRA,
+		GL_UNSIGNED_BYTE, surface->pixels);
+
+	// Use linear filtering
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 }
 
 ENGINE_NAMESPACE_END

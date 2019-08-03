@@ -144,6 +144,11 @@ const float * Matrix4::getShaderPtr() const
 	return reinterpret_cast<const float*>(&mat[0][0]);
 }
 
+Vector3 Matrix4::getTranslation() const
+{
+	return Vector3(mat[3][0], mat[3][1], mat[3][2]);
+}
+
 void Matrix4::invert()
 {
 	float tmp[12];
@@ -384,6 +389,18 @@ Matrix4 Matrix4::createPerspective(float fovY, float width, float height, float 
 		{ 0.0f, yScale, 0.0f, 0.0f },
 		{ 0.0f, 0.0f, far / (far - near), 1.0f },
 		{ 0.0f, 0.0f, -near * far / (far - near), 0.0f }
+	};
+	return Matrix4(temp);
+}
+
+Matrix4 Matrix4::createSimpleViewProj(float width, float height)
+{
+	float temp[4][4] =
+	{
+		{ 2.0f / width, 0.0f, 0.0f, 0.0f },
+		{ 0.0f, 2.0f / height, 0.0f, 0.0f },
+		{ 0.0f, 0.0f, 1.0f, 0.0f },
+		{ 0.0f, 0.0f, 1.0f, 1.0f }
 	};
 	return Matrix4(temp);
 }

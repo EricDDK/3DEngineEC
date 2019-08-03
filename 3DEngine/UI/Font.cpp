@@ -1,8 +1,11 @@
 #include "Font.h"
+#include "../Game.h"
+#include <SDL/SDL_ttf.h>
 
 ENGINE_NAMESPACE_START
 
-Font::Font()
+Font::Font(Game* game)
+	: _game(game)
 {
 
 }
@@ -52,7 +55,33 @@ Texture* Font::renderTexture(const std::string& textKey,
 	int pointSize)
 {
 	Texture* texture = nullptr;
+	// Convert to SDL_Color
+	SDL_Color sdlColor;
+	sdlColor.r = static_cast<Uint8>(color.x * 255);
+	sdlColor.g = static_cast<Uint8>(color.y * 255);
+	sdlColor.b = static_cast<Uint8>(color.z * 255);
+	sdlColor.a = 255;
 
+	// Find the font data for this point size
+	auto iter = _fontData.find(pointSize);
+	if (iter != _fontData.end())
+	{
+		TTF_Font* font = iter->second;
+		const std::string& actualText = _game->getText(textKey);
+		// Draw this to a surface (blended for alpha)
+		SDL_Surface* surf = TTF_RenderUTF8_Blended(font, actualText.c_str(), sdlColor);
+		if (surf != nullptr)
+		{
+			// Convert from surface to texture
+			texture = new Texture();
+			texture->createFromSurface(surf);
+			SDL_FreeSurface(surf);
+		}
+	}
+	else
+	{
+		SDL_Log("Point size %d is unsupported", pointSize);
+	}
 	return texture;
 }
 

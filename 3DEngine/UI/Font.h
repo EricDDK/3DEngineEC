@@ -1,5 +1,5 @@
-#ifndef _RENDER_FONT_H__
-#define _RENDER_FONT_H__
+#ifndef _UI_FONT_H__
+#define _UI_FONT_H__
 
 #include "../Common/Macro.h"
 #include "../Render/Texture.h"
@@ -11,11 +11,13 @@
 
 ENGINE_NAMESPACE_START
 
+class Game;
+
 class Font
 {
 public:
 
-	Font();
+	Font(Game* game);
 
 	~Font();
 
@@ -31,7 +33,7 @@ private:
 
 	std::unordered_map<int, TTF_Font*> _fontData;
 
-	// TODO
+	Game* _game;
 
 };
 
